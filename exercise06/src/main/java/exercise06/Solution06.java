@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Solution06 {
     /*
     Get the current value of the year
-    store the year to 'year'
+    Store the year to 'year'
 
     print "What is your current age?" to prompt user for their age
     scanner reads the user's input,
@@ -21,8 +21,11 @@ public class Solution06 {
     scanner will read the user input
     'retire' stores the input
 
+    'remaining' stores the calculation of the remaining year a user can retire.
+    'retYear stores the calculation to tell what year can user can retire.
+
     print "You have <remaining> years left until you can retire.
-    newline print "It's <currYear>, so you can retire in <retYear>
+    newline print "It's <year>, so you can retire in <retYear>
      */
     private static Scanner scanner = new Scanner(System.in);
 
@@ -38,6 +41,7 @@ public class Solution06 {
 
         int remaining = retire - age;
         int retYear = year + remaining;
+
         System.out.println("You have " + remaining + " years until you can retire. \n" +
                 "It is " + year + " so you have retired in " + retYear);
 
