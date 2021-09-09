@@ -5,6 +5,7 @@
 
 package exercise12;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Solution12 {
@@ -43,8 +44,9 @@ public class Solution12 {
 
         double intDecimal = interest / 100.0;
         double endAmount = principal * (1 + (intDecimal * time));
+        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
 
-        System.out.println("After " + time + " years at " + interest + "% the investment will be worth $" + Math.round(endAmount));
+        System.out.println("After " + time + " years at " + interest + "% the investment will be worth " + defaultFormat.format(endAmount));
 
     }
 }

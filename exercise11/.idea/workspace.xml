@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa0416cf-c987-45d4-a99b-6b77c2f1cf46" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise12/src/main/java/exercise12/Solution12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercise13/src/main/java/exercise13/Solution13.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise11/Solution11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise11/Solution11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/build/classes/java/main/exercise12/Solution12.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/build/classes/java/main/exercise12/Solution12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/src/main/java/exercise12/Solution12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/src/main/java/exercise12/Solution12.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

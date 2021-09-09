@@ -5,6 +5,7 @@
 
 package exercise11;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Solution11 {
@@ -35,10 +36,10 @@ public class Solution11 {
         float rate = r8.nextFloat();
 
         float dollars = euro * rate;
-        double roundOff = Math.round(dollars * 100.0)/100.0;
+        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
 
         System.out.println(euro + " euros at an exchange rate of " + rate + " is\n" +
-                roundOff + " U.S. dollars.");
+                defaultFormat.format(dollars) + " U.S. dollars.");
 
     }
 }
