@@ -39,8 +39,6 @@ public class Solution18 {
 
     public static void main(String[] args) {
 
-        String input = "nothing";
-
         String msg = """
                 Press C to convert from Fahrenheit to Celsius. 
                 Press F to convert from Celsius to Fahrenheit.

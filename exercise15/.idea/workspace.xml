@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96af1c0d-9d79-44ff-a72f-d3358a5d2084" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise18/src/main/java/exercise18/Solution18.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b3002799d40f71ced41d5735ffd77d59d1e38ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise17/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise17/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise17/build/classes/java/main/exercise17/Solution17.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise17/build/classes/java/main/exercise17/Solution17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise17/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise17/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise17/src/main/java/exercise17/Solution17.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise17/src/main/java/exercise17/Solution17.java" afterDir="false" />
-    </list>
+    <list default="true" id="96af1c0d-9d79-44ff-a72f-d3358a5d2084" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
