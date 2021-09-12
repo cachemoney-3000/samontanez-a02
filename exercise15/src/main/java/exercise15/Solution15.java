@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 public class Solution15 {
     /*
+    Print "Enter username: "
+    scanner takes the input from the user
+
     Print "What is your password? "
     scanner takes the input from the user
     'password' string stores the input
@@ -27,6 +30,10 @@ public class Solution15 {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.print("Please enter your username: ");
+        Scanner userStr = new Scanner(System.in);
+        String user = userStr.nextLine();
+
         System.out.print("What is the password? ");
         Scanner passStr = new Scanner(System.in);
         String password = passStr.nextLine();
