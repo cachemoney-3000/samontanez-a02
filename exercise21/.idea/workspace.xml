@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5aad065-450f-46d4-9329-dbc100c6b765" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../exercise21/src/main/java/exercise21/Solution21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0d163b6d-54bb-4ba8-ac15-766cc7c3883e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exercise21/Solution21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="1y0PZovACWFhI5R5erdyS7OyUbM" />
+  <component name="ProjectId" id="1y1MADocav3Nu29kmMp68cun0dM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
@@ -54,15 +54,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="Solution20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercise20.Solution20" />
-      <module name="exercise20.main" />
+    <configuration name="Solution21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise21.Solution21" />
+      <module name="exercise21.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercise20.*" />
+          <option name="PATTERN" value="exercise21.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,18 +71,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution20" />
+        <item itemvalue="Application.Solution21" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f5aad065-450f-46d4-9329-dbc100c6b765" name="Changes" comment="" />
-      <created>1631385590668</created>
+      <changelist id="0d163b6d-54bb-4ba8-ac15-766cc7c3883e" name="Changes" comment="" />
+      <created>1631414496167</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631385590668</updated>
+      <updated>1631414496167</updated>
     </task>
     <servers />
   </component>
@@ -97,6 +96,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
