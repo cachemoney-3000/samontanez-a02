@@ -3,11 +3,11 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise21;
+package exercise22;
 
 import java.util.Scanner;
 
-public class Solution21 {
+public class Solution22 {
     /*
         Print "Enter the first number "
         scanner takes the input from the user
