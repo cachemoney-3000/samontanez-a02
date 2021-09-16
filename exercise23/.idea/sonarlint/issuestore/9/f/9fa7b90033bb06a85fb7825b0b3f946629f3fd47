@@ -1,0 +1,40 @@
+
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(áž¢Žýÿÿÿÿ
+`	java:S128V"LEnd this switch case with an unconditional break, return or throw statement.(Ï’âK
+^
+java:S6208D"CMerge the previous cases into this one using comma-separated label.(ø°Û…þÿÿÿÿ
+X
+java:S6208V"CMerge the previous cases into this one using comma-separated label.(Ï’âK
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(†î®ä
+^
+java:S6208K"CMerge the previous cases into this one using comma-separated label.(ø°Û…þÿÿÿÿ
+X
+java:S6208O"CMerge the previous cases into this one using comma-separated label.(Ï’âK
+7	java:S131I""Add a default case to this switch.(ø …Û
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(ëÄ€ÿ
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(¯§åû
+N	java:S106W"9Replace this use of System.out or System.err by a logger.(¿™ôü
+^
+java:S6208]"CMerge the previous cases into this one using comma-separated label.(ø°Û…þÿÿÿÿ
+X
+java:S6208b"CMerge the previous cases into this one using comma-separated label.(Ï’âK
+<	java:S131[""Add a default case to this switch.(êûÐ—øÿÿÿÿ
+N	java:S106^"9Replace this use of System.out or System.err by a logger.(âÔåÎ
+M	java:S106c"9Replace this use of System.out or System.err by a logger.(Œ™ó 
+f	java:S128i"LEnd this switch case with an unconditional break, return or throw statement.(ø°Û…þÿÿÿÿ
+^
+java:S6208i"CMerge the previous cases into this one using comma-separated label.(ø°Û…þÿÿÿÿ
+X
+java:S6208z"CMerge the previous cases into this one using comma-separated label.(Ï’âK
+<	java:S131g""Add a default case to this switch.(úÈ”Ðüÿÿÿÿ
+N	java:S106j"9Replace this use of System.out or System.err by a logger.(€¾åÊ
+^
+java:S6208p"CMerge the previous cases into this one using comma-separated label.(ø°Û…þÿÿÿÿ
+X
+java:S6208u"CMerge the previous cases into this one using comma-separated label.(Ï’âK
+<	java:S131n""Add a default case to this switch.(˜õ’€úÿÿÿÿ
+S	java:S106q"9Replace this use of System.out or System.err by a logger.(´¯º²þÿÿÿÿ
+S	java:S106v"9Replace this use of System.out or System.err by a logger.(„ýÓÍþÿÿÿÿ
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(„¼±Ûùÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(‡ðˆ³ùÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æÌÊž
