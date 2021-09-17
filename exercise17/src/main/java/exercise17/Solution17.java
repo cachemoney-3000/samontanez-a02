@@ -3,13 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise17;
-
-import java.text.DecimalFormat;
-import java.util.Scanner;
-
-public class Solution17 {
-    /*
+/*
     Print "Enter 1 if you are a male or 2 if you are a female: "
     scanner takes the input from the user,
     A while-loop, determines if the user input a number, if not, it will print "Please enter a number."
@@ -47,57 +41,63 @@ public class Solution17 {
         Print "It is legal for you to drive."
      */
 
+package exercise17;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Solution17 {
+    private double gender;
+    private double alcoholConsumed;
+    private double weight;
+    private double time;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution17 sol17 = new Solution17();
 
-            System.out.print("Enter 1 if you are a male or 2 if you are a female: ");
-            Scanner input0 = new Scanner(System.in);
-            while (!input0.hasNextInt()) {
-                System.out.println("Invalid input, please enter a number!");
-                input0.nextLine();
-            }
-            int gender = input0.nextInt();
-
-            double male = 0.73, female = 0.66;
-            double ratio = (gender == 1) ? male : female;
-
-            System.out.print("How many ounces of alcohol did you have? ");
-            Scanner input1 = new Scanner(System.in);
-            while (!input1.hasNextInt()) {
-                System.out.println("Invalid input, please enter a number!");
-                input1.nextLine();
-             }
-            int alcoholConsume = input1.nextInt();
-
-            System.out.print("What is your weight in pounds? ");
-            Scanner input2 = new Scanner(System.in);
-            while (!input2.hasNextInt()) {
-                System.out.println("Invalid input, please enter a number!");
-                input2.nextLine();
-            }
-            int weight = input2.nextInt();
-
-            System.out.print("How many hours has it been since catch (NumberFormatException e) {e your last drink? ");
-            Scanner input3 = new Scanner(System.in);
-             while (!input3.hasNextInt()) {
-                System.out.println("Invalid input, please enter a number!");
-                 input3.nextLine();
-              }
-            int time = input3.nextInt();
+        sol17.gender = sol17.readValueFromUser("Enter 1 if you are a male or 2 if you are a female: ");
+        sol17.alcoholConsumed = sol17.readValueFromUser("How many ounces of alcohol did you have? ");
+        sol17.weight = sol17.readValueFromUser("What is your weight in pounds? ");
+        sol17.time = sol17.readValueFromUser("How many hours has it been since your last drink? ");
 
 
-            double BAC = (alcoholConsume * 5.14 / weight * ratio) - 0.015 * time;
+        double ratio = sol17.ratio(sol17.gender);
+        double BAC = sol17.BAC(sol17.alcoholConsumed, sol17.weight, sol17.time, ratio);
 
-            DecimalFormat dF = new DecimalFormat(("###.######"));
-            System.out.println("\nYour BAC is " + dF.format(BAC));
+        System.out.println(sol17.output(BAC));
+    }
 
-            if (BAC > 0.08) {
-                System.out.println("It is not legal for you to drive.");
-            } else {
-                System.out.println("It is legal for you to drive");
-            }
+    private double readValueFromUser(String prompt){
+        System.out.print(prompt);
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Invalid input, please enter a number: ");
+            scanner.nextLine();
+        }
+        return scanner.nextDouble();
+    }
 
+    private double ratio(double gender){
+        double male = 0.73;
+        double female = 0.66;
+        double r = (gender == 1) ? male : female;
+        return r;
+    }
 
+    private double BAC(double alcoholConsumed, double weight, double time, double ratio){
+        return (alcoholConsumed * 5.14 / weight * ratio) - 0.015 * time;
+    }
+
+    private String output(double BAC){
+        DecimalFormat decimal = new DecimalFormat(("###.######"));
+        System.out.println("\nYour BAC is " + decimal.format(BAC));
+
+        if (BAC > 0.08) {
+            return "It is not legal for you to drive.";
+        } else {
+            return "It is legal for you to drive";
+        }
     }
 }
 
