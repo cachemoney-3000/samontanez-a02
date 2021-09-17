@@ -3,11 +3,6 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise09;
-
-import java.util.Scanner;
-
-public class Solution09 {
     /*
     Calculate gallons of paint needed to paint the ceiling of a room.
     Print "What is the length of the room in feet?"
@@ -24,25 +19,53 @@ public class Solution09 {
     print "You will need to purchase <paint> gallons of paint to cover <area> square feet."
      */
 
+package exercise09;
+
+import java.util.Scanner;
+
+public class Solution09 {
+
+    private int length;
+    private  int width;
+    private static final int constantValue = 350;
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("What is the length of the room in feet? ");
-        String lenStr = scanner.nextLine();
-        int length = Integer.parseInt(lenStr);
+        Solution09 sol9 = new Solution09();
 
-        System.out.print("What is the width of the room in feet? ");
-        String widStr = scanner.nextLine();
-        int width = Integer.parseInt(widStr);
+        sol9.length = sol9.readValueFromUser("What is the length of the room in feet? ");
+        sol9.width = sol9.readValueFromUser("What is the width of the room in feet? ");
 
-        int area = length * width;
-        int numPaint = area / 350;
-        int leftOver = area % 350;
+        int constantValue = 350;
+        int area = sol9.area(sol9.length, sol9.width);
+        int numPaint = sol9.numPaint(area, constantValue);
+        int leftOver = sol9.leftOver(area, constantValue);
 
-        if(leftOver<350 && leftOver>0) {
+        if(leftOver < constantValue || leftOver > constantValue)
             numPaint++;
-        }
 
-        System.out.println("You will need to purchase " + numPaint + " gallons of paint to cover " + area + " square feet.");
+        System.out.println(sol9.output(numPaint, area));
+    }
+
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private int area(int length, int width){
+        return length * width;
+    }
+
+    private int numPaint(int area, int constant){
+        return area / constant;
+    }
+
+    private int leftOver(int area, int constant){
+        return area % constant;
+    }
+
+    private String output(int numPaint, int area){
+        return "You will need to purchase " + numPaint + " gallons of paint to cover " + area + " square feet.";
     }
 }
