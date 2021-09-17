@@ -3,13 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise13;
-
-import java.util.Scanner;
-import java.text.NumberFormat;
-
-public class Solution13 {
-    /*
+/*
     Print "What is the principal amount? "
     scanner takes the input from the user
     'principal' stores the input
@@ -39,33 +33,51 @@ public class Solution13 {
      <compoundInt> times per year is $<endAmount>.
      */
 
-    private static Scanner scanner = new Scanner(System.in);
+package exercise13;
+
+import java.util.Scanner;
+import java.text.NumberFormat;
+
+public class Solution13 {
+    private double principal;
+    private double interestRate;
+    private double time;
+    private double compoundInterest;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("What is the principal amount? ");
-        Scanner num1 = new Scanner(System.in);
-        int principal = num1.nextInt();
+        Solution13 sol13 = new Solution13();
 
-        System.out.print("What is the rate? ");
-        Scanner num2 = new Scanner(System.in);
-        double interest = num2.nextDouble();
+        sol13.principal = sol13.readValueFromUser("What is the principal amount? ");
+        sol13.interestRate = sol13.readValueFromUser("What is the rate? ");
+        sol13.time = sol13.readValueFromUser("What is the number of years? ");
+        sol13.compoundInterest = sol13.readValueFromUser("What is the number of times the " +
+                "interest is compounded per year? ");
 
-        System.out.print("What is the number of years? ");
-        Scanner num3 = new Scanner(System.in);
-        double time = num3.nextDouble();
+        double interest = sol13.interest(sol13.interestRate);
+        double endAmount = sol13.endAmount(sol13.principal, interest, sol13.compoundInterest, sol13.time);
 
-        System.out.print("What is the number of times the interest is compounded per year? ");
-        Scanner num4 = new Scanner(System.in);
-        double compoundInt = num4.nextDouble();
+        System.out.println(sol13.output(sol13.principal, sol13.interestRate, sol13.time, endAmount, sol13.compoundInterest));
+    }
 
+    private double readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextDouble();
+    }
 
-        double intDecimal = interest / 100.0;
-        double endAmount = principal * Math.pow (1 + (intDecimal / compoundInt), (compoundInt * time));
-        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+    private double interest(double interestRate){
+        return interestRate / 100;
+    }
 
+    private double endAmount(double principal, double interestRate, double compoundInterest, double time){
+        return principal * Math.pow (1 + (interestRate / compoundInterest), (compoundInterest * time));
+    }
 
-        System.out.println("$" + principal + " invested at " + interest + " for " + time + " years compounded "
-            + compoundInt + " times per year is " + defaultFormat.format(endAmount));
+    private String output(double principal, double interest, double time, double endAmount, double compoundInterest){
+        NumberFormat dollar = NumberFormat.getCurrencyInstance();
 
+        return "$" + principal + " invested at " + interest + "% for " + time + " years compounded "
+                + compoundInterest + " times per year is " + dollar.format(endAmount) + ".";
     }
 }

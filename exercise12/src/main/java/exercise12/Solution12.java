@@ -31,7 +31,7 @@ public class Solution12 {
     private double interest;
     private double time;
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         Solution12 sol12 = new Solution12();
