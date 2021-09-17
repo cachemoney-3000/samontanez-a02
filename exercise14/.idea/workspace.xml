@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fb4a72-50a6-446f-be7e-0a7c8800a275" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise14/Solution14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise14/Solution14.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/7/b/7b3002799d40f71ced41d5735ffd77d59d1e38ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise15/src/main/java/exercise15/Solution15.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise15/src/main/java/exercise15/Solution15.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

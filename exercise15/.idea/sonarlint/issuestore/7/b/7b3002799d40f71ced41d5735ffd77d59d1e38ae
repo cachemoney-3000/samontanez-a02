@@ -1,13 +1,0 @@
-
-Q	java:S125"<This block of commented-out lines of code should be removed.(Ø¹Í¯
-U
-java:S1854#"8Remove this useless assignment to local variable "user".(†ÑÛĞ8ãŞ´Õ½/
-S	java:S106!"9Replace this use of System.out or System.err by a logger.(÷¾ÑÁÿÿÿÿÿ
-F
-java:S1481#")Remove this unused "user" local variable.(†ÑÛĞ8èŞ´Õ½/
-Z	java:S106%"9Replace this use of System.out or System.err by a logger.(ŒÜ¥Öûÿÿÿÿ8èŞ´Õ½/
-T	java:S106,"9Replace this use of System.out or System.err by a logger.(¯áh8ëŞ´Õ½/
-Z	java:S106/"9Replace this use of System.out or System.err by a logger.(øäš¼øÿÿÿÿ8ìŞ´Õ½/
-@
-java:S1068"+Remove this unused "scanner" private field.(·¸ã
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(œşäıÿÿÿÿÿ

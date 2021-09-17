@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise15;
-
-import java.util.Scanner;
-
-public class Solution15 {
-    /*
+/*
     Print "Enter username: "
     scanner takes the input from the user
 
@@ -27,24 +22,39 @@ public class Solution15 {
     }
      */
 
-    private static Scanner scanner = new Scanner(System.in);
+package exercise15;
+
+import java.util.Scanner;
+
+public class Solution15 {
+    private String user;
+    private String password;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Please enter your username: ");
-        Scanner userStr = new Scanner(System.in);
-        String user = userStr.nextLine();
+        Solution15 sol15 = new Solution15();
 
-        System.out.print("What is the password? ");
-        Scanner passStr = new Scanner(System.in);
-        String password = passStr.nextLine();
+        sol15.user = sol15.readValueFromUser("Please enter your username: ");
+        sol15.password = sol15.readValueFromUser("What is the password? ");
 
+        System.out.println(sol15.output(sol15.password, sol15.user));
+
+    }
+
+    private String readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextLine();
+    }
+
+    private String output(String password, String user){
         String key = "pa$$word";
 
         if(password.equals(key)){
-            System.out.println("Welcome!");
+            return "Nice to see you, " + user + "!";
         }
         else{
-            System.out.println("I don't know you.");
+            return "I don't know you.";
         }
     }
 }
