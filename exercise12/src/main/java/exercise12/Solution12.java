@@ -3,13 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise12;
-
-import java.text.NumberFormat;
-import java.util.Scanner;
-
-public class Solution12 {
-    /*
+/*
     Print "Enter the principal: "
     scanner takes the input from the user
     'principal' stores the input
@@ -27,26 +21,46 @@ public class Solution12 {
      Print "After <time> years at <interest>% the investment will be worth $<endAmount>.
      */
 
+package exercise12;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Solution12 {
+    private double principal;
+    private double interest;
+    private double time;
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Enter the principal: ");
-        Scanner num1 = new Scanner(System.in);
-        double principal = num1.nextDouble();
+        Solution12 sol12 = new Solution12();
 
-        System.out.print("Enter the rate of interest: ");
-        Scanner num2 = new Scanner(System.in);
-        double interest = num2.nextDouble();
+        sol12.principal = sol12.readValueFromUser("Enter the principal: ");
+        sol12.interest = sol12.readValueFromUser("Enter the rate of interest: ");
+        sol12.time = sol12.readValueFromUser("Enter the number of years: ");
 
-        System.out.print("Enter the number of years: ");
-        Scanner num3 = new Scanner(System.in);
-        double time = num3.nextDouble();
+        double interest = sol12.convInterest(sol12.interest);
+        double endAmount = sol12.endAmount(sol12.principal, interest, sol12.time);
 
-        double intDecimal = interest / 100.0;
-        double endAmount = principal * (1 + (intDecimal * time));
-        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+        System.out.println(sol12.output(sol12.time, sol12.interest, endAmount));
+    }
+    private double readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextDouble();
+    }
 
-        System.out.println("After " + time + " years at " + interest + "% the investment will be worth " + defaultFormat.format(endAmount));
+    private double convInterest(double interest){
+        return interest / 100.0;
+    }
 
+    private double endAmount(double principal, double interest, double time){
+        return principal * (1 + (interest * time));
+    }
+
+    private String output(double time, double interest, double endAmount){
+        NumberFormat dollar = NumberFormat.getCurrencyInstance();
+        return "After " + time + " years at " + interest + "% the investment will be worth "
+                + dollar.format(endAmount);
     }
 }
