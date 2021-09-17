@@ -3,12 +3,6 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise06;
-
-import java.util.Calendar;
-import java.util.Scanner;
-
-public class Solution06 {
     /*
     Get the current value of the year
     Store the year to 'year'
@@ -27,24 +21,36 @@ public class Solution06 {
     print "You have <remaining> years left until you can retire.
     newline print "It's <year>, so you can retire in <retYear>
      */
+
+package exercise06;
+
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class Solution06 {
+
+    private int age;
+    private int retire;
+
     private static Scanner scanner = new Scanner(System.in);
 
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
     public static void main(String[] args) {
+        Solution06 sol6 = new Solution06();
+
         int year = Calendar.getInstance().get(Calendar.YEAR);
-        System.out.print("How old are you? ");
-        String ageStr = scanner.nextLine();
-        int age = Integer.parseInt(ageStr);
 
-        System.out.print("At what age would you like to retire? ");
-        String retStr = scanner.nextLine();
-        int retire = Integer.parseInt(retStr);
+        sol6.age = sol6.readValueFromUser("How old are you? ");
+        sol6.retire = sol6.readValueFromUser("At what age would you like to retire? ");
 
-        int remaining = retire - age;
-        int retYear = year + remaining;
+        int remaining = sol6.retire - sol6.age;
+        int retYear = remaining + year;
 
         System.out.println("You have " + remaining + " years until you can retire. \n" +
                 "It is " + year + " so you have retired in " + retYear);
-
-
     }
 }
