@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise16;
-
-import java.util.Scanner;
-
-public class Solution16 {
-    /*
+/*
     Print "What is your age? "
     scanner takes the input from the user
     'age' stores the input from user
@@ -21,17 +16,32 @@ public class Solution16 {
         false: You are not old enough to legally drive.
      */
 
+package exercise16;
+
+import java.util.Scanner;
+
+public class Solution16 {
+    private int age;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("What is your age? ");
-        Scanner input = new Scanner(System.in);
-        int age = input.nextInt();
+        Solution16 sol16 = new Solution16();
 
-        int minAgeLegal = 16;
+        sol16.age = sol16.readValueFromUser("What is your age? ");
+        int minLegalAge = 16;
 
-        String msg = (age >= minAgeLegal) ? "You are old enough to legally drive" :
+        System.out.println(sol16.output(sol16.age, minLegalAge));
+    }
+
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private String output(int age, int minLegalAge){
+        String msg = (age >= minLegalAge) ? "You are old enough to legally drive" :
                 "You are not old enough to legally drive";
-
-        System.out.println(msg);
+        return msg;
     }
 }
