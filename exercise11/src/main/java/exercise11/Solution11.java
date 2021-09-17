@@ -3,13 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise11;
-
-import java.text.NumberFormat;
-import java.util.Scanner;
-
-public class Solution11 {
-    /*
+/*
     Print "How many euros are you exchanging? "
     scanner takes the input from the user
     'euro' stores the input
@@ -24,22 +18,40 @@ public class Solution11 {
     Print "<euro> euros at an exchange rate of <rate> is <dollars> U.S. dollars.
      */
 
+package exercise11;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Solution11 {
+    private float euro;
+    private float rate;
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("How many euros are you exchanging? ");
-        String euroStr = scanner.nextLine();
-        int euro = Integer.parseInt(euroStr);
+        Solution11 sol11 = new Solution11();
 
-        System.out.print("What is the current exchange rate? ");
-        Scanner r8 = new Scanner(System.in);
-        float rate = r8.nextFloat();
+        sol11.euro = sol11.readValueFromUser("How many euros are you exchanging? ");
+        sol11.rate = sol11.readValueFromUser("What is the current exchange rate? ");
 
-        float dollars = euro * rate;
-        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+        float dollars = sol11.dollarConversion(sol11.euro, sol11.rate);
 
-        System.out.println(euro + " euros at an exchange rate of " + rate + " is\n" +
-                defaultFormat.format(dollars) + " U.S. dollars.");
+        System.out.println(sol11.output(sol11.euro, sol11.rate, dollars));
+    }
 
+    private float readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextFloat();
+    }
+
+    private float dollarConversion(float euro, float rate){
+        return euro * rate;
+    }
+
+    private String output(float euro, float rate, float dollars){
+        NumberFormat dollar = NumberFormat.getCurrencyInstance();
+        return euro + " euros at an exchange rate of " + rate + " is\n" +
+                dollar.format(dollars) + " U.S. dollars.";
     }
 }
