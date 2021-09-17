@@ -3,13 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise14;
-
-import java.text.NumberFormat;
-import java.util.Scanner;
-
-public class Solution14 {
-    /*
+/*
     Print "What is the order amount "
     scanner takes the input from the user
     'subtotal' stores the input
@@ -28,31 +22,49 @@ public class Solution14 {
     Print "The total is <total>."
      */
 
-    private static Scanner scanner = new Scanner(System.in);
+package exercise14;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Solution14 {
+    private double subtotal;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("What is the order amount? ");
-        Scanner num1 = new Scanner(System.in);
-        double subtotal = num1.nextDouble();
+        Solution14 sol14 = new Solution14();
+
+        sol14.subtotal = sol14.readValueFromUser("What is the order amount? ");
 
         System.out.print("What is the state? ");
         Scanner stateStr = new Scanner(System.in);
         String state = stateStr.nextLine();
 
-        NumberFormat defaultFormat = NumberFormat.getCurrencyInstance();
+        System.out.println(sol14.output(state, sol14.subtotal));
+    }
 
-        if(state.equals("WI")){
-            double tax = (5.5/100) * subtotal;
+    private double readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextDouble();
+    }
+
+    private String output(String state, double subtotal) {
+        NumberFormat dollar = NumberFormat.getCurrencyInstance();
+
+        if (state.equals("WI") || state.equals("wi")) {
+            double tax = (5.5 / 100) * subtotal;
             double total = tax + subtotal;
 
-            System.out.println("The subtotal is " + defaultFormat.format(subtotal) + "." +
-                    "\nThe tax is " + defaultFormat.format(tax) + "." +
-                    "\nThe total is " + defaultFormat.format(total) + ".");
+            return "The subtotal is " + dollar.format(subtotal) + "." +
+                    "\nThe tax is " + dollar.format(tax) + "." +
+                    "\nThe total is " + dollar.format(total) + ".";
         }
 
-        if(!state.equals("WI")){
+        if (!state.equals("WI") || !state.equals("wi")) {
             double total = subtotal;
-            System.out.println("The total is " + defaultFormat.format(total));
+            return "The total is " + dollar.format(total);
         }
+        return "Try again";
     }
 }
