@@ -32,7 +32,7 @@ public class Solution06 {
     private int age;
     private int retire;
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     private int readValueFromUser(String prompt){
         System.out.print(prompt);

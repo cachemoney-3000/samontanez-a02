@@ -3,11 +3,6 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise07;
-
-import java.util.Scanner;
-
-public class Solution07 {
     /*
 
     Create a program that calculates the area of a room. Prompt the user for the length and width of the room in feet.
@@ -30,23 +25,39 @@ public class Solution07 {
     print "<meter2> square meters"
 
      */
-    private static Scanner scanner = new Scanner(System.in);
+
+package exercise07;
+
+import java.util.Scanner;
+
+public class Solution07 {
+
+    private int length;
+    private  int width;
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private int area(int length, int width){
+        return length * width;
+    }
 
     public static void main(String[] args) {
-        System.out.print("What is the length of the room in feet? ");
-        String lenStr = scanner.nextLine();
-        int length = Integer.parseInt(lenStr);
+        Solution07 sol7 = new Solution07();
 
-        System.out.print("What is the width of the room in feet? ");
-        String widStr = scanner.nextLine();
-        int width = Integer.parseInt(widStr);
+        sol7.length = sol7.readValueFromUser("What is the length of the room in feet? ");
+        sol7.width = sol7.readValueFromUser("What is the width of the room in feet? ");
 
-        int area = length * width;
+        int area = sol7.area(sol7.length, sol7.width);
         double meter2 = area * 0.09290304;
 
-        System.out.println("You entered dimensions of " + lenStr + " feet by " + widStr + " feet.");
-        System.out.println("The area is \n"
-                + area + " square feet");
+        System.out.printf("You entered dimensions of " + sol7.length + " feet by " + sol7.width + " feet." +
+                "\nThe area is\n"
+                + area + " square feet\n");
         System.out.printf("%.3f square meters", meter2);
 
     }
