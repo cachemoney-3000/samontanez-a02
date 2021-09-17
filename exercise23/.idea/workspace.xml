@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576aa6ab-43f4-4498-969c-ed2f9772cf5f" name="Changes" comment="" />
+    <list default="true" id="576aa6ab-43f4-4498-969c-ed2f9772cf5f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../exercise19/build/classes/java/main/exercise19/Solution19.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise19/build/classes/java/main/exercise19/Solution19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise19/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise19/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise19/src/main/java/exercise19/Solution19.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise19/src/main/java/exercise19/Solution19.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/sonarlint/issuestore/a/9/a9f2be1a052d4e4bec89732c009ff78cd1f6dca5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/build/classes/java/main/exercise20/Solution20.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/build/classes/java/main/exercise20/Solution20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise20/src/main/java/exercise20/Solution20.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise20/src/main/java/exercise20/Solution20.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9fa7b90033bb06a85fb7825b0b3f946629f3fd47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

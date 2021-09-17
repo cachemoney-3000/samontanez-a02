@@ -47,13 +47,13 @@ public class Solution19 {
 
     }
 
-    private int readValueFromUser(String prompt) {
+    private double readValueFromUser(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextDouble()){
             System.out.println("Invalid input, please enter a number: ");
             scanner.nextLine();
         }
-        return scanner.nextInt();
+        return scanner.nextDouble();
     }
 
     private double calculateBMI(double weight, double height){
