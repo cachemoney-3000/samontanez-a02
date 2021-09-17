@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise10;
-
-import java.util.Scanner;
-
-public class Solution10 {
-    /*
+/*
     print "Enter the price of item 1:"
     scanner takes the input from the user
     'item1' stores the price of the first item.
@@ -43,40 +38,63 @@ public class Solution10 {
     print "Total: $<totalPrice"
      */
 
+package exercise10;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Solution10 {
+    private int item1;
+    private int quantityItem1;
+    private int item2;
+    private int quantityItem2;
+    private int item3;
+    private int quantityItem3;
+    private final double taxRate = 0.055;
+
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("Enter the price of item 1: ");
-        String item1str = scanner.nextLine();
-        int item1 = Integer.parseInt(item1str);
+        Solution10 sol10 = new Solution10();
 
-        System.out.print("Enter the quantity of item 1: ");
-        String qtt1Str = scanner.nextLine();
-        int qtt1 = Integer.parseInt(qtt1Str);
+        sol10.item1 = sol10.readValueFromUser("Enter the price of item 1: ");
+        sol10.quantityItem1 = sol10.readValueFromUser("Enter the quantity of item 1: ");
+        sol10.item2 = sol10.readValueFromUser("Enter the price of item 2: ");
+        sol10.quantityItem2 = sol10.readValueFromUser("Enter the quantity of item 2: ");
+        sol10.item3 = sol10.readValueFromUser("Enter the price of item 3: ");
+        sol10.quantityItem3 = sol10.readValueFromUser("Enter the quantity of item 3: ");
 
-        System.out.print("Enter the price of item 2: ");
-        String item2str = scanner.nextLine();
-        int item2 = Integer.parseInt(item2str);
+        double subtotal = sol10.subtotal(sol10.item1, sol10.quantityItem1, sol10.item2, sol10.quantityItem2,
+                sol10.item3, sol10.quantityItem3);
+        double taxRate = sol10.taxRate;
+        double tax = sol10.tax(subtotal, taxRate);
+        double totalPrice = sol10.totalPrice(subtotal, tax);
 
-        System.out.print("Enter the quantity of item 2: ");
-        String qtt2Str = scanner.nextLine();
-        int qtt2 = Integer.parseInt(qtt2Str);
+        System.out.println(sol10.output(subtotal, tax, totalPrice));
+    }
 
-        System.out.print("Enter the price of item 3: ");
-        String item3str = scanner.nextLine();
-        int item3 = Integer.parseInt(item3str);
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
 
-        System.out.print("Enter the quantity of item 3: ");
-        String qtt3Str = scanner.nextLine();
-        int qtt3 = Integer.parseInt(qtt3Str);
+    private double subtotal(int item1, int qtt1, int item2, int qtt2, int item3, int qtt3){
+        return (item1 * qtt1) + (item2 * qtt2) + (item3 * qtt3);
+    }
 
-        double subtotal = (item1 * qtt1) + (item2 * qtt2) + (item3 * qtt3);
-        double taxRate = 0.055;
-        double tax = subtotal * taxRate;
-        double totalPrice = subtotal + tax;
+    private double tax(double subtotal, double taxRate){
+        return subtotal * taxRate;
+    }
 
-        System.out.printf("Subtotal: $%.2f\n", subtotal);
-        System.out.printf("Tax: $%.2f\n", tax);
-        System.out.printf("Total: $%.2f", totalPrice);
+    private double totalPrice(double subtotal, double tax){
+        return subtotal + tax;
+    }
+
+    private String output(double subtotal, double tax, double totalPrice){
+        NumberFormat dollar = NumberFormat.getCurrencyInstance();
+
+        return "Subtotal: " + dollar.format(subtotal) + "\nTax: " + dollar.format(tax) +
+                "\nTotal: " + dollar.format(totalPrice);
+
     }
 }
