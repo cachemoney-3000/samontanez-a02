@@ -1,0 +1,16 @@
+
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(ı²›Áøÿÿÿÿ
+S	java:S106L"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+S	java:S106N"9Replace this use of System.out or System.err by a logger.(Ãòø­ıÿÿÿÿ
+S	java:S106U"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
+
+java:S1488W"]Immediately return this expression instead of assigning it to the temporary variable "input".(÷¨¾•ÿÿÿÿÿ8Ô¢’¦¿/
+q
+java:S1488`"[Immediately return this expression instead of assigning it to the temporary variable "tax".(‚şÃ¸
+v
+java:S1488d"[Immediately return this expression instead of assigning it to the temporary variable "tax".(ÃËª™øÿÿÿÿ
+v
+java:S1488k"[Immediately return this expression instead of assigning it to the temporary variable "tax".(¡á»Äûÿÿÿÿ
+t	java:S1202"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ßš½ùÿÿÿÿ
+b
+java:S3973g"GUse indentation to denote the code conditionally executed by this "if".(˜³±ıÿÿÿÿ

@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise21;
-
-import java.util.Scanner;
-
-public class Solution21 {
-    /*
+/*
 
     >While loop will determine if the user input is valid (1-12 only)
         Print "Please enter the number of the month: "
@@ -41,72 +36,73 @@ public class Solution21 {
     Print "The name of the month is <month>."
      */
 
+package exercise21;
+
+import java.util.Scanner;
+
+public class Solution21 {
+    private int monthNum;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution21 sol21 = new Solution21();
 
-        Scanner input1 = new Scanner(System.in);
-        int monthNum;
+        sol21.monthNum = sol21.readValueFromUser("Please enter the number of the month: ");
 
-        while (true) {
-            System.out.print("Please enter the number of the month: ");
-            monthNum = input1.nextInt();
+        System.out.println(sol21.month(sol21.monthNum));
 
-            if (monthNum > 0 && monthNum < 13) {
-                String month = month(monthNum);
-                System.out.println("The name of the month is " + month);
+    }
+
+    private int readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private static String month (int monthNum){
+        String month;
+        switch (monthNum) {
+            case 1:
+                month = "January";
                 break;
-            }
-            else{
-                System.out.println("Wrong input, try again!");
-            }
-
+            case 2:
+                month = "February";
+                break;
+            case 3:
+                month = "March";
+                break;
+            case 4:
+                month = "April";
+                break;
+            case 5:
+                month = "May";
+                break;
+            case 6:
+                month = "June";
+                break;
+            case 7:
+                month = "July";
+                break;
+            case 8:
+                month = "August";
+                break;
+            case 9:
+                month = "September";
+                break;
+            case 10:
+                month = "October";
+                break;
+            case 11:
+                month = "November";
+                break;
+            case 12:
+                month = "December";
+                break;
+            default:
+                month = "Invalid input, try again!";
+                return month;
         }
+        return "The name of the month is " + month;
     }
 
-        private static String month ( int monthNum){
-            String month;
-            switch (monthNum) {
-                case 1:
-                    month = "January";
-                    return month;
-                case 2:
-                    month = "February";
-                    return month;
-
-                case 3:
-                    month = "March";
-                    return month;
-                case 4:
-                    month = "April";
-                    return month;
-                case 5:
-                    month = "May";
-                    return month;
-                case 6:
-                    month = "June";
-                    return month;
-                case 7:
-                    month = "July";
-                    return month;
-                case 8:
-                    month = "August";
-                    return month;
-                case 9:
-                    month = "September";
-                    return month;
-                case 10:
-                    month = "October";
-                    return month;
-                case 11:
-                    month = "November";
-                    return month;
-                case 12:
-                    month = "December";
-                    return month;
-            }
-            return "no value";
-        }
-    }
-
-
-
+}

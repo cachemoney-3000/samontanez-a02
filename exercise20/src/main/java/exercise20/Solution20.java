@@ -53,7 +53,6 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Solution20 {
-
     private double subtotal;
     private String state;
     private String county;
