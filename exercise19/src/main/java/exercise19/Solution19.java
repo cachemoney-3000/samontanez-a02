@@ -3,14 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise19;
-
-import java.util.Scanner;
-import java.text.DecimalFormat;
-
-
-public class Solution19 {
-    /*
+/*
     Print "Enter your weight"
     scanner takes the input from the user
         while loop will determine if the user input is valid
@@ -32,37 +25,50 @@ public class Solution19 {
         print "You are overweight. You should see your doctor."
      */
 
+package exercise19;
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Solution19 {
+    private double weight;
+    private double height;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution19 sol19 = new Solution19();
 
+        sol19.weight = sol19.readValueFromUser("Enter your weight in pounds: ");
+        sol19.height = sol19.readValueFromUser("Enter your height in inches: ");
 
-        System.out.print("Enter your weight in pounds: ");
-        Scanner input1 = new Scanner(System.in);
-        while (!input1.hasNextInt()) {
-            System.out.println("Invalid input, please enter a number!");
-            input1.nextLine();
+        double BMI = sol19.calculateBMI(sol19.weight, sol19.height);
+        System.out.println(sol19.output(BMI));
+
+    }
+
+    private int readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextDouble()){
+            System.out.println("Invalid input, please enter a number: ");
+            scanner.nextLine();
         }
-        double weight = input1.nextInt();
+        return scanner.nextInt();
+    }
 
-        System.out.print("Enter your height in inches: ");
-        Scanner input2 = new Scanner(System.in);
-        while (!input2.hasNextInt()) {
-            System.out.println("Invalid input, please enter a number!");
-            input2.nextLine();
-        }
-        double height = input2.nextInt();
+    private double calculateBMI(double weight, double height){
+        return (weight / (height * height)) * 703;
+    }
 
-        double BMI = (weight / (height * height)) * 703;
-        DecimalFormat dF = new DecimalFormat(("###.#"));
-
-        System.out.println("Your BMI is " + dF.format(BMI));
+    private String output(double BMI){
+        DecimalFormat decimal = new DecimalFormat(("###.#"));
 
         if(BMI > 18.5 && BMI < 25){
-            System.out.println("You are within the ideal weight range.");
+            return "Your BMI is " + decimal.format(BMI) +
+                    "\nYou are within the ideal weight range.";
         }
-
         else
-            System.out.println("You are overweight. You should see your doctor");
-
+            return "Your BMI is " + decimal.format(BMI) +
+            "\nYou are overweight. You should see your doctor";
     }
 }

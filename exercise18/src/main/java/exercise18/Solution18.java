@@ -31,7 +31,6 @@
 
      */
 
-
 package exercise18;
 
 import java.util.Scanner;
