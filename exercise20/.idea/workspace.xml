@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5aad065-450f-46d4-9329-dbc100c6b765" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exercise20/Solution20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise20/Solution20.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise21/.idea/sonarlint/issuestore/2/9/29b28b08f7c89269c3ade220b83f7ef7b5359fbe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise21/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise21/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise21/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercise21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise21/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise21/src/main/java/exercise21/Solution21.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise21/src/main/java/exercise21/Solution21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise22/.idea/sonarlint/issuestore/a/2/a2417e32eb4ba1e0518e53f092d06bb65095f25e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise22/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise22/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise22/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise22/src/main/java/exercise22/Solution22.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise22/src/main/java/exercise22/Solution22.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

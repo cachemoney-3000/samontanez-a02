@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise22;
-
-import java.util.Scanner;
-
-public class Solution22 {
-    /*
+/*
         Print "Enter the first number "
         scanner takes the input from the user
         'num1' stores the input from user
@@ -39,23 +34,39 @@ public class Solution22 {
         Therefore:
         Print "The largest number is <numMax>."
      */
+package exercise22;
+
+import java.util.Scanner;
+
+public class Solution22 {
+    private int num1;
+    private int num2;
+    private int num3;
+
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.print("What is the first number: ");
-        Scanner input1 = new Scanner(System.in);
-        int num1 = input1.nextInt();
+        Solution22 sol22 = new Solution22();
 
-        System.out.print("What is the second number: ");
-        Scanner input2 = new Scanner(System.in);
-        int num2 = input2.nextInt();
+        sol22.num1 = sol22.readValueFromUser("What is the first number: ");
+        sol22.num2 = sol22.readValueFromUser("What is the second number: ");
+        sol22.num3 = sol22.readValueFromUser("What is the third number: ");
 
-        System.out.print("What is the third number: ");
-        Scanner input3 = new Scanner(System.in);
-        int num3 = input3.nextInt();
+        System.out.println(sol22.output(sol22.num1, sol22.num2, sol22.num3));
 
+    }
+    private int readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextDouble()){
+            System.out.println("Invalid input, please enter a number: ");
+            scanner.nextLine();
+        }
+        return scanner.nextInt();
+    }
+
+    private String output(int num1, int num2, int num3){
         if(num1 == num2 && num2 == num3){
-            System.out.println("All numbers are equal, exiting...");
-            System.exit(0);
+            return "All numbers are equal, exiting...";
         }
         else {
             int numMax = num1;
@@ -68,7 +79,7 @@ public class Solution22 {
             else
                 numMax = num3;
 
-            System.out.println("The largest number is " + numMax);
+            return "The largest number is " + numMax;
         }
     }
 }
