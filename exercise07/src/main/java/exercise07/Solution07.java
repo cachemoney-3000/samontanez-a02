@@ -29,13 +29,28 @@
 package exercise07;
 
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Solution07 {
 
     private int length;
     private  int width;
+    private static final double constantValue = 0.09290304;
 
     private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Solution07 sol7 = new Solution07();
+
+        sol7.length = sol7.readValueFromUser("What is the length of the room in feet? ");
+        sol7.width = sol7.readValueFromUser("What is the width of the room in feet? ");
+
+        int area = sol7.area(sol7.length, sol7.width);
+        double meter2 = area * sol7.constantValue;
+
+        System.out.println(sol7.output(sol7.length, sol7.width, area, meter2));
+
+    }
 
     private int readValueFromUser(String prompt){
         System.out.print(prompt);
@@ -46,19 +61,14 @@ public class Solution07 {
         return length * width;
     }
 
-    public static void main(String[] args) {
-        Solution07 sol7 = new Solution07();
+    private String output(int length, int width, int area, double meter2){
+        DecimalFormat decimal = new DecimalFormat(("###.###"));
 
-        sol7.length = sol7.readValueFromUser("What is the length of the room in feet? ");
-        sol7.width = sol7.readValueFromUser("What is the width of the room in feet? ");
-
-        int area = sol7.area(sol7.length, sol7.width);
-        double meter2 = area * 0.09290304;
-
-        System.out.printf("You entered dimensions of " + sol7.length + " feet by " + sol7.width + " feet." +
+        return "You entered dimensions of " + length + " feet by " + width + " feet." +
                 "\nThe area is\n"
-                + area + " square feet\n");
-        System.out.printf("%.3f square meters", meter2);
-
+                + area + " square feet\n" +
+                decimal.format(meter2) + " square meters";
     }
+
+
 }

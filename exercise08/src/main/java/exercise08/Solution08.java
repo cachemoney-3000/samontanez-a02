@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise08;
-
-import java.util.Scanner;
-
-public class Solution08 {
-    /*
+/*
     print "How many people" to prompt user for the number of people
     scanner gets the input from user,
     'people' will store the input.
@@ -31,27 +26,53 @@ public class Solution08 {
     print "There are <leftover> leftover pieces."
 
      */
+
+package exercise08;
+
+import java.util.Scanner;
+
+public class Solution08 {
+
+    private int people;
+    private int pizza;
+    private int slice;
+
     private static Scanner scanner = new Scanner(System.in);
 
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private int totalSlices(int slice, int pizza){
+        return slice * pizza;
+    }
+
+    private int piece(int pizza, int slice, int people){
+        return (pizza*slice)/people;
+    }
+
+    private int leftover(int pizza, int slice, int people){
+        return (pizza*slice) % people;
+    }
+
     public static void main(String[] args) {
-        System.out.print("How many people? ");
-        String peopleStr = scanner.nextLine();
-        int people = Integer.parseInt(peopleStr);
+        Solution08 sol8 = new Solution08();
 
-        System.out.print("How many pizzas do you have? ");
-        String pizzaStr = scanner.nextLine();
-        int pizza = Integer.parseInt(pizzaStr);
+        sol8.people = sol8.readValueFromUser("How many people? ");
+        sol8.pizza = sol8.readValueFromUser("How many pizzas do you have? ");
+        sol8.slice = sol8.readValueFromUser("How many slices per pizza? ");
 
-        System.out.print("How many slices per pizza? ");
-        String sliceStr = scanner.nextLine();
-        int slice = Integer.parseInt(sliceStr);
+        int totalSlices = sol8.totalSlices(sol8.slice, sol8.pizza);
+        int piece = sol8.piece(sol8.pizza, sol8.slice, sol8.people);
+        int leftover = sol8.leftover(sol8.pizza, sol8.slice, sol8.people);
 
-        int totalSlices = slice * pizza;
-        int piece = (pizza*slice)/people;
-        int leftover = (pizza*slice) % people;
+        System.out.println(sol8.output(sol8.people, sol8.pizza, totalSlices, piece, leftover));
+    }
 
-        System.out.println(people + " people with " + pizza + " pizzas (" + totalSlices + " slices).");
-        System.out.println("Each person gets " + piece + " pieces of pizza.");
-        System.out.println("There are " + leftover + " leftover pieces.");
+    private String output(int people, int pizza, int totalSlices, int piece, int leftover){
+        return people + " people with " + pizza + " pizzas (" + totalSlices + " slices).\n" +
+                "Each person gets " + piece + " pieces of pizza.\n" +
+                "There are " + leftover + " leftover pieces.";
     }
 }

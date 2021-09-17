@@ -34,11 +34,6 @@ public class Solution06 {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    private int readValueFromUser(String prompt){
-        System.out.print(prompt);
-        return scanner.nextInt();
-    }
-
     public static void main(String[] args) {
         Solution06 sol6 = new Solution06();
 
@@ -50,7 +45,16 @@ public class Solution06 {
         int remaining = sol6.retire - sol6.age;
         int retYear = remaining + year;
 
-        System.out.println("You have " + remaining + " years until you can retire. \n" +
-                "It is " + year + " so you have retired in " + retYear);
+        System.out.println(sol6.output(remaining, year, retYear));
+    }
+
+    private int readValueFromUser(String prompt){
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private String output(int remaining, int year, int retYear){
+        return "You have " + remaining + " years until you can retire. \n" +
+                "It is " + year + " so you have retired in " + retYear;
     }
 }
