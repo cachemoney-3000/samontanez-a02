@@ -39,6 +39,20 @@ public class Solution08 {
 
     private static Scanner scanner = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        Solution08 sol8 = new Solution08();
+
+        sol8.people = sol8.readValueFromUser("How many people? ");
+        sol8.pizza = sol8.readValueFromUser("How many pizzas do you have? ");
+        sol8.slice = sol8.readValueFromUser("How many slices per pizza? ");
+
+        int totalSlices = sol8.totalSlices(sol8.slice, sol8.pizza);
+        int piece = sol8.piece(sol8.pizza, sol8.slice, sol8.people);
+        int leftover = sol8.leftover(sol8.pizza, sol8.slice, sol8.people);
+
+        System.out.println(sol8.output(sol8.people, sol8.pizza, totalSlices, piece, leftover));
+    }
+
     private int readValueFromUser(String prompt){
         System.out.print(prompt);
         return scanner.nextInt();
@@ -54,20 +68,6 @@ public class Solution08 {
 
     private int leftover(int pizza, int slice, int people){
         return (pizza*slice) % people;
-    }
-
-    public static void main(String[] args) {
-        Solution08 sol8 = new Solution08();
-
-        sol8.people = sol8.readValueFromUser("How many people? ");
-        sol8.pizza = sol8.readValueFromUser("How many pizzas do you have? ");
-        sol8.slice = sol8.readValueFromUser("How many slices per pizza? ");
-
-        int totalSlices = sol8.totalSlices(sol8.slice, sol8.pizza);
-        int piece = sol8.piece(sol8.pizza, sol8.slice, sol8.people);
-        int leftover = sol8.leftover(sol8.pizza, sol8.slice, sol8.people);
-
-        System.out.println(sol8.output(sol8.people, sol8.pizza, totalSlices, piece, leftover));
     }
 
     private String output(int people, int pizza, int totalSlices, int piece, int leftover){
