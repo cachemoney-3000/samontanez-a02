@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise18;
-
-import java.util.Scanner;
-
-public class Solution18 {
-    /*
+/*
     Print "Press C to convert from Fahrenheit to Celsius."
     Print "Press F to convert from Celsius to Fahrenheit."
 
@@ -37,40 +32,52 @@ public class Solution18 {
      */
 
 
+package exercise18;
+
+import java.util.Scanner;
+
+public class Solution18 {
+    private String conv;
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
+        Solution18 sol18 = new Solution18();
 
+        sol18.conv = sol18.readValueFromUser();
+        System.out.println(sol18.conversion(sol18.conv));
+    }
+
+    private String readValueFromUser() {
         String msg = """
-                Press C to convert from Fahrenheit to Celsius. 
+                Press C to convert from Fahrenheit to Celsius.
                 Press F to convert from Celsius to Fahrenheit.
-                Your choice: """;
-
+                Your choice:""";
         System.out.print(msg);
-                Scanner convStr = new Scanner(System.in);
-                String conv = convStr.nextLine();
+        return scanner.nextLine();
+    }
+
+    private int readValue(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+
+    private String conversion(String conv){
+        Solution18 sol18 = new Solution18();
 
         if (conv.equals("C") || conv.equals("c")) {
-            System.out.print("Please enter the temperature in Fahrenheit: ");
-            Scanner fah = new Scanner(System.in);
-            int F = fah.nextInt();
+            int fahrenheit = sol18.readValue("Please enter the temperature in Fahrenheit: ");
+            int celsius = (fahrenheit - 32) * 5 / 9;
 
-            int C = (F - 32) * 5 / 9;
-
-            System.out.println("The temperature in Celsius is " + C + ".");
-
+            return "The temperature in Celsius is " + celsius + ".";
         }
         else if(conv.equals("F") || conv.equals("f")){
-            System.out.print("Please enter the temperature in Celsius: ");
-            Scanner cel = new Scanner(System.in);
-            int C = cel.nextInt();
+            int celsius = sol18.readValue("Please enter the temperature in Celsius: ");
+            int fahrenheit = (celsius * 9 / 5) + 32;
 
-            int F = (C * 9 / 5) + 32;
-
-            System.out.println("The temperature in Fahrenheit is " + F + ".");
+            return "The temperature in Fahrenheit is " + fahrenheit + ".";
         }
         else{
-            System.out.println("Invalid input, re-run the program again.");
+            return "Invalid input, re-run the program again.";
         }
-
-
     }
 }
