@@ -5,12 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05fb4a72-50a6-446f-be7e-0a7c8800a275" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise06/src/main/java/exercise06/Solution06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise06/src/main/java/exercise06/Solution06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise07/src/main/java/exercise07/Solution07.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise07/src/main/java/exercise07/Solution07.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise08/src/main/java/exercise08/Solution08.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise08/src/main/java/exercise08/Solution08.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise09/src/main/java/exercise09/Solution09.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise09/src/main/java/exercise09/Solution09.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise10/.idea/sonarlint/issuestore/b/2/b266dcb61b38260ee4308ed596d3725720cdd3c7" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise10/.idea/sonarlint/issuestore/b/2/b266dcb61b38260ee4308ed596d3725720cdd3c7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise10/src/main/java/exercise10/Solution10.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise10/src/main/java/exercise10/Solution10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise11/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise11/src/main/java/exercise11/Solution11.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise11/src/main/java/exercise11/Solution11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/.idea/sonarlint/issuestore/4/7/479297a3e24d116c7b8a53fac1bdf7a64db18619" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise12/src/main/java/exercise12/Solution12.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise12/src/main/java/exercise12/Solution12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise13/src/main/java/exercise13/Solution13.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise13/src/main/java/exercise13/Solution13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/acd5c0583ca711b9d614e001d47de7485389bf2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exercise14/Solution14.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exercise14/Solution14.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/7/b/7b3002799d40f71ced41d5735ffd77d59d1e38ae" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise15/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise15/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise15/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../exercise15/src/main/java/exercise15/Solution15.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise15/src/main/java/exercise15/Solution15.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/d/2/d2821b4f06a893f1418a4c28e592dad72fd0a394" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise16/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercise16/src/main/java/exercise16/Solution16.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercise16/src/main/java/exercise16/Solution16.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

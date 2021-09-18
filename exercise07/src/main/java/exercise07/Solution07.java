@@ -1,9 +1,9 @@
 /*
- *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  UCF COP3330 Fall 2021 Assignment 2 Solution
  *  Copyright 2021 Joshua Samontanez
  */
 
-    /*
+/*
 
     Create a program that calculates the area of a room. Prompt the user for the length and width of the room in feet.
      Then display the area in both square feet and square meters.

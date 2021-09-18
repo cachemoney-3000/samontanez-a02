@@ -3,6 +3,3 @@
 java:S11705"!Make this final field static too.(¾×¦ü
 M	java:S106I"9Replace this use of System.out or System.err by a logger.(¢åÿG
 S	java:S106M"9Replace this use of System.out or System.err by a logger.(Æİêùÿÿÿÿ
-X
-java:S2184R"BCast one of the operands of this addition operation to a "double".(©ÿÏ
-t	java:S120)"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ößáşÿÿÿÿ
