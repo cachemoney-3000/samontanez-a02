@@ -3,12 +3,7 @@
  *  Copyright 2021 Joshua Samontanez
  */
 
-package exercise23;
-
-import java.util.Scanner;
-
-public class Solution23 {
-    /*
+/*
         Print "Is the car silent when you turn the key? (Y/N) "
         scanner takes the input from the user
         'key' stores the input from user
@@ -58,76 +53,86 @@ public class Solution23 {
                         end the program.
      */
 
+package exercise23;
+
+import java.util.Scanner;
+
+public class Solution23 {
+    private char key;
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-            System.out.print("Is the car silent when you turn the key? (Y/N) ");
-            Scanner keyStr = new Scanner(System.in);
-            char key = keyStr.next().charAt(0);
+        Solution23 sol23 = new Solution23();
 
-            switch (key) {
-                case 'Y':
-                case 'y':
-                    System.out.print("Are the battery terminals corroded? (Y/N) ");
-                    Scanner terminalStr = new Scanner(System.in);
-                    char terminal = terminalStr.next().charAt(0);
+        sol23.key = sol23.readValueFromUser("Is the car silent when you turn the key? (Y/N) ");
+        System.out.println(sol23.switchMain(sol23.key));
 
-                    switch (terminal) {
-                        case 'Y':
-                        case 'y':
-                            System.out.println("Clean terminals and try starting again.");
-                            break;
-                        case 'N':
-                        case 'n':
-                            System.out.println("Replace the cables and try again.");
-                            break;
-                    }
-                    break;
-
-                case 'N':
-                case 'n':
-                    System.out.print("Does the car make a slicking noise? (Y/N) ");
-                    Scanner slickNoiseStr = new Scanner(System.in);
-                    char slickNoise = slickNoiseStr.next().charAt(0);
-
-                    switch (slickNoise) {
-                        case 'Y':
-                        case 'y':
-                            System.out.println("Check the spark plug connections.");
-                            break;
-
-                        case 'N':
-                        case 'n':
-                            System.out.print("Does the engine start and die? (Y/N) ");
-                            Scanner engineStr = new Scanner(System.in);
-                            char engine = engineStr.next().charAt(0);
-
-                            switch (engine) {
-                                case 'Y':
-                                case 'y':
-                                    System.out.print("Does your car have fuel injection? (Y/N) ");
-                                    Scanner fuelInjStr = new Scanner(System.in);
-                                    char fuelInj = fuelInjStr.next().charAt(0);
-
-                                    switch (fuelInj) {
-                                        case 'Y':
-                                        case 'y':
-                                            System.out.println("Get it in for service.");
-                                            break;
-
-                                        case 'N':
-                                        case 'n':
-                                            System.out.println("Check to ensure the choke is opening and closing.");
-                                            break;
-                                    }
-                                case 'N':
-                                case 'n':
-                                    System.out.println("This should not be possible.");
-                                    break;
-                            }
-                    }
-                default:
-                    System.out.println("That is not a valid entry, try again.");
-            }
     }
 
+    private char readValueFromUser(String prompt) {
+        System.out.print(prompt);
+        return scanner.next().charAt(0);
+    }
+
+    private String switchMain(char input) {
+        Solution23 sol23 = new Solution23();
+        char terminal;
+        char clickNoise;
+        char engine;
+        char fuelInjector;
+
+        switch (input) {
+            case 'Y':
+            case 'y':
+                terminal = sol23.readValueFromUser("Are the battery terminals corroded? (Y/N) ");
+                return sol23.switchLastLevel(terminal,"Clean terminals and try starting again.",
+                        "Replace the cables and try again.");
+
+            case 'N':
+            case 'n':
+                clickNoise = sol23.readValueFromUser("Does the car make a clicking noise? (Y/N) ");
+                switch (clickNoise) {
+                    case 'Y':
+                    case 'y':
+                        return "Check the spark plug connections.";
+
+                    case 'N':
+                    case 'n':
+                        engine = sol23.readValueFromUser("Does the engine start and die? (Y/N) ");
+                        switch (engine) {
+                            case 'Y':
+                            case 'y':
+                                fuelInjector = sol23.readValueFromUser("Does your car have fuel injection? (Y/N) ");
+                                return sol23.switchLastLevel(fuelInjector,"Get it in for service.",
+                                        "Check to ensure the choke is opening and closing.");
+                            case 'N':
+                            case 'n':
+                                return "This should not be possible.";
+
+                            default:
+                                return "That is not a valid entry, try again.";
+                        }
+                }
+            default:
+                return "That is not a valid entry, try again.";
+        }
+    }
+
+    private String switchLastLevel(char input, String promptYes, String promptNo) {
+        String prompt;
+        switch (input) {
+            case 'Y':
+            case 'y':
+                prompt = promptYes;
+                break;
+            case 'N':
+            case 'n':
+                prompt = promptNo;
+                break;
+            default:
+                return "Invalid input, try again.";
+        }
+        return prompt;
+    }
 }
 
